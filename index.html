@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Food Available</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" media="only screen and(max-width:1050px)" href="/phone.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+        
+        .navbar::before {
+            content: "";
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            height: 16%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        /* #logo {
+            padding: 6px; 
+            margin:1px; 
+        } */
+        
+        img {
+            height: 115px;
+            width: 115px;
+        }
+        
+        ul {
+            display: flex;
+            /* margin: 20px; */
+            padding: 20px;
+        }
+        
+        ul li {
+            list-style: none;
+            font-size: 1.1rem;
+            margin: 12px 12px;
+        }
+        
+        ul li a {
+            display: block;
+            padding: 10px 8px;
+            border-radius: 20px;
+            color: white;
+            text-decoration: none;
+            font-family: 'Satisfy', cursive;
+        }
+        
+        ul li a:hover {
+            color: black;
+            background-color: white;
+            border-radius: 6px;
+        }
+        /* section::before { content: ""; background: url('/bg3.jpeg'); } */
+        
+        #home::before {
+            content: "";
+            background: url('/bg3.jpeg') no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 80%;
+            z-index: -1;
+            opacity: 0.85;
+        }
+        
+        #home {
+            color: white;
+            padding: 8px 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 500px;
+        }
+        
+        #mainheading {
+            padding: 22px;
+            font-size: 2.2rem;
+            font-family: 'Courgette', cursive;
+        }
+        
+        #homepara {
+            width: 850px;
+            text-align: center;
+            font-size: 16px;
+            font-family: 'Courgette', cursive;
+        }
+        
+        #btn {
+            border: 2px solid white;
+            padding: 5px 6px;
+            margin: 13px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Courgette', cursive;
+        }
+        
+        #btn:hover {
+            background-color: black;
+            color: white;
+            border: 2px solid black;
+        }
+        
+        #services {
+            text-align: center;
+        }
+        
+        #servicehead {
+            font-size: 2.5rem;
+            color: black;
+            font-family: 'Itim', cursive;
+        }
+        
+        .typeservice {
+            display: flex;
+        }
+        
+        .box {
+            border: 2px solid brown;
+            margin: 40px 24px;
+            padding: 30px 44px;
+            border-radius: 40px;
+            background-color: rgb(252, 250, 250);
+        }
+        
+        #img-1 {
+            display: block;
+            margin: auto;
+            width: 215px;
+            height: 164px;
+            border-radius: 60px;
+        }
+        
+        .boxhead {
+            font-size: 1.8rem;
+            padding: 4px;
+            font-family: 'Itim', cursive;
+        }
+        /* Clients section */
+        
+        #clients {
+            text-align: center;
+        }
+        
+        .nclients::before {
+            content: "";
+            background: url('/thali.jpg') no-repeat center center/cover;
+            position: absolute;
+            height: 40%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.4;
+        }
+        
+        .nclients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #clienthead {
+            font-size: 2.5rem;
+            color: black;
+            font-family: 'Itim', cursive;
+        }
+        
+        .client1 {
+            padding: 25px 20px;
+        }
+        
+        .text {
+            font-family: 'Itim', cursive;
+        }
+        /* Contact section */
+        
+        #contact {
+            margin: 100px 0px;
+        }
+        
+        .contacthead {
+            text-align: center;
+            font-size: 2.5rem;
+            color: black;
+            font-family: 'Itim', cursive;
+        }
+        
+        .contactbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+        
+        .contactbox input,
+        .contactbox textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+        }
+        
+        .contactbox form {
+            width: 35%;
+        }
+        
+        .contactbox label {
+            font-size: 1.3rem;
+            font-family: 'Courgette', cursive;
+        }
+        
+        #contact::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 60%;
+            width: 100%;
+            background: url('/contact.jpg') no-repeat center center/cover;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        footer {
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 9px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div id="logo">
+            <img src="/logo1.jpg" alt="OrederMyFood.com">
+        </div>
+        <ul>
+            <li class="items"><a href="#">HOME</a></li>
+            <li class="items"><a href="#">SERVICES</a></li>
+            <li class="items"><a href="#">ABOUT US</a></li>
+            <li class="items"><a href="#">CONTACT US</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 id="mainheading">Welcome to OrderMyFoodOnline</h1>
+        <p id="homepara">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur reiciendis quis voluptatem! Amet beatae quia odit quidem fugit velit? Amet repellendus eaque placeat reprehenderit, eos neque vitae. Tempora, inventore optio?</p>
+        <button id="btn">Order Now</button>
+    </section>
+    <section id="services">
+        <h1 id="servicehead">Our Services</h1>
+        <div class="typeservice">
+            <div class="box">
+                <img id="img-1" src="/pizza.jpg" alt="PIZZA">
+                <h2 class="boxhead">Food Ordering</h2>
+                <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis blanditiis ea, error ut esse veritatis deleniti. Veritatis, odio nihil. Eum deleniti ea, laudantium, pariatur nobis fugiat facilis possimus temporibus odit sed assumenda!</p>
+            </div>
+            <div class="box">
+                <img id="img-1" src="/icecream.jpeg" alt="PIZZA">
+                <h2 class="boxhead">Food Catering</h2>
+                <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis blanditiis ea, error ut esse veritatis deleniti. Veritatis, odio nihil. Eum deleniti ea, laudantium, pariatur nobis fugiat facilis possimus temporibus odit sed assumenda!</p>
+            </div>
+            <div class="box">
+                <img id="img-1" src="/delivery boy.jpg" alt="PIZZA">
+                <h2 class="boxhead">Bulk Ordering</h2>
+                <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis blanditiis ea, error ut esse veritatis deleniti. Veritatis, odio nihil. Eum deleniti ea, laudantium, pariatur nobis fugiat facilis possimus temporibus odit sed assumenda!</p>
+            </div>
+        </div>
+    </section>
+    <section id="clients">
+        <h1 id="clienthead">Our Clients</h1>
+        <div class="nclients">
+            <div class="client1">
+                <img src="/applewhite.jpg" alt="Apple">
+            </div>
+            <div class="client1">
+                <img src="/hp-logo.jpg" alt="hp">
+            </div>
+            <div class="client1">
+                <img src="/Microsoft-logo.jpg" alt="Microsoft">
+            </div>
+            <div class="client1">
+                <img src="/Zomato_logo.png" alt="Zomato">
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h1 class="contacthead">Contact Us</h1>
+        <div class="contactbox">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="name">Email:</label>
+                    <input type="email" name="Email" id="email" placeholder="Enter Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="name">Phone Number:</label>
+                    <input type="phone" name="Phone" id="Phone" placeholder="Enter Your Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="name">Message:</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; www.ordermyfood.com. All rights reserved!
+        </div>
+    </footer>
+</body>
+
+</html>
